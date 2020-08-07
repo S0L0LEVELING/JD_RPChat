@@ -30,6 +30,13 @@ Config.MerPrefixColor = '1'
 Config.OocPrefixColor = '3'
 Config.TwtPrefixColor = '5'
 
+Config.Me3d = true
+Config.Me3dScale = 0.5 										-- Text scale
+Config.Me3dcolor = { r = 230, g = 230, b = 230, a = 255 } 	-- Text color
+Config.Me3dfont = 0 										-- Text font
+Config.Me3ddisplayTime = 5000 								-- Duration to display the text (in ms)
+Config.Me3ddistToDraw = 250 								-- Min. distance to draw
+
 -- for the perfix you need the Ace Permissions
 -- EXAMPLE:  add_ace group.admin jd.admin allow
 

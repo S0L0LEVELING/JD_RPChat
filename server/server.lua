@@ -27,6 +27,8 @@ RegisterCommand("me", function(source, args, rawCommand)
 		_id = ""
 	end
 	TriggerClientEvent('chatMessage', -1, "^*^"..Config.MePrefixColor.."".._id..""..Config.MePrefix.." " .. GetPlayerName(source)..":^r^0 "..rawCommand:gsub("me", ""), { 201, 201, 201 })
+	local text = "*" .. rawCommand:gsub("me", "") .. " *"
+    TriggerClientEvent('shareDisplay', -1, text, source)
 	if Config.JD_logs then
 		exports.JD_logs:discord('[ME] **'.. GetPlayerName(source) .. '**:`' .. rawCommand:gsub("me ", "") .. '`', source, 0 , Config.JD_Logs_color, Config.JD_Logs_channel)
 	end
@@ -39,6 +41,8 @@ RegisterCommand("mer", function(source, args, rawCommand)
 		_id = ""
 	end
 	TriggerClientEvent('chatMessage', -1, "^*^"..Config.MerPrefixColor.."".._id..""..Config.MerPrefix.." " .. GetPlayerName(source)..":^r^0"..rawCommand:gsub("mer", ""), { 255, 0, 0 })
+	local text = "~r~*" .. rawCommand:gsub("mer", "") .. " *"
+    TriggerClientEvent('shareDisplay', -1, text, source)
 	if Config.JD_logs then
 		exports.JD_logs:discord('[ME] **'.. GetPlayerName(source) .. '**:`' .. rawCommand:gsub("mer ", "") .. '`', source, 0 , Config.JD_Logs_color, Config.JD_Logs_channel)
 	end
