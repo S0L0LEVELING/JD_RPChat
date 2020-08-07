@@ -1,5 +1,7 @@
 Config = {}
 
+Config.playerID = true
+
 Config.DiscordLink = 'https://discord.gg/m4BvmkG'
 Config.TeamSpeakLink = 'ts.jokedevil.com'
 Config.WebsiteLink = 'https://www.jokedevil.com'

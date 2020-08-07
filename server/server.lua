@@ -10,23 +10,43 @@ AddEventHandler('chatMessage', function(source, args, rawCommand)
 	if string.sub(rawCommand,1,string.len("/"))=="/" then
 		CancelEvent()
 	else
-		TriggerClientEvent('chatMessage', -1, "^*^"..color..""..prefix.." " .. GetPlayerName(source)..":^r^0 "..rawCommand, { 255, 255, 255 })
+		if Config.playerID then
+			_id = source.." | "
+		else
+			_id = ""
+		end
+		TriggerClientEvent('chatMessage', -1, "^*^"..color.."".._id..""..prefix.." " .. GetPlayerName(source)..":^r^0 "..rawCommand, { 255, 255, 255 })
 		CancelEvent()
 	end
 end)
 
 RegisterCommand("me", function(source, args, rawCommand)
-	TriggerClientEvent('chatMessage', -1, "^*^"..Config.MePrefixColor..""..Config.MePrefix.." " .. GetPlayerName(source)..":^r^0 "..rawCommand:gsub("me", ""), { 201, 201, 201 })
+	if Config.playerID then
+		_id = source.." | "
+	else
+		_id = ""
+	end
+	TriggerClientEvent('chatMessage', -1, "^*^"..Config.MePrefixColor.."".._id..""..Config.MePrefix.." " .. GetPlayerName(source)..":^r^0 "..rawCommand:gsub("me", ""), { 201, 201, 201 })
 	exports.JD_logs:discord('[ME] **'.. GetPlayerName(source) .. '**:`' .. rawCommand:gsub("me ", "") .. '`', source, 0 , '10592673', 'chat')
 end)
 
 RegisterCommand("mer", function(source, args, rawCommand)
-	TriggerClientEvent('chatMessage', -1, "^*^"..Config.MerPrefixColor..""..Config.MerPrefix.." " .. GetPlayerName(source)..":^r^0"..rawCommand:gsub("mer", ""), { 255, 0, 0 })
+	if Config.playerID then
+		_id = source.." | "
+	else
+		_id = ""
+	end
+	TriggerClientEvent('chatMessage', -1, "^*^"..Config.MerPrefixColor.."".._id..""..Config.MerPrefix.." " .. GetPlayerName(source)..":^r^0"..rawCommand:gsub("mer", ""), { 255, 0, 0 })
 	exports.JD_logs:discord('[ME] **'.. GetPlayerName(source) .. '**:`' .. rawCommand:gsub("mer ", "") .. '`', source, 0 , '10592673', 'chat')
 end)
 
 RegisterCommand("twt", function(source, args, rawCommand)
-	TriggerClientEvent('chatMessage', -1, "^*^"..Config.TwtPrefixColor..""..Config.TwtPrefix.." @" .. GetPlayerName(source)..":^r^0 "..rawCommand:gsub("twt", ""))
+	if Config.playerID then
+		_id = source.." | "
+	else
+		_id = ""
+	end
+	TriggerClientEvent('chatMessage', -1, "^*^"..Config.TwtPrefixColor.."".._id..""..Config.TwtPrefix.." @" .. GetPlayerName(source)..":^r^0 "..rawCommand:gsub("twt", ""))
 	exports.JD_logs:discord('[Twotter] **'.. GetPlayerName(source) .. '**:`' .. rawCommand:gsub("twt ", "") .. '`', source, 0 , '10592673', 'chat')
 end)
 
@@ -46,6 +66,11 @@ RegisterCommand("website", function(source, args, rawCommand)
 end)
 
 RegisterCommand("ooc", function(source, args, rawCommand)
+	if Config.playerID then
+		_id = source.." | "
+	else
+		_id = ""
+	end
 	exports.JD_logs:discord('[OOC] **'.. GetPlayerName(source) .. '**:`' .. rawCommand:gsub("ooc ", "") .. '`', source, 0 , '10592673', 'chat')
 	prefix = Config.ServerPerms[1][2]
 	color = Config.ServerPerms[1][1]
@@ -55,7 +80,7 @@ RegisterCommand("ooc", function(source, args, rawCommand)
 			prefix = Config.ServerPerms[i][2]
 		end
 	end
-	TriggerClientEvent('chatMessage', -1, "^*^"..Config.OocPrefixColor..""..Config.OocPrefix.." ^"..color..""..prefix.." " .. GetPlayerName(source)..":^r^0 "..rawCommand:gsub("ooc", ""), { 201, 201, 201 })
+	TriggerClientEvent('chatMessage', -1, "^*^"..Config.OocPrefixColor.."".._id..""..Config.OocPrefix.." ^"..color..""..prefix.." " .. GetPlayerName(source)..":^r^0 "..rawCommand:gsub("ooc", ""), { 201, 201, 201 })
 end)
 
 function stringsplit(inputstr, sep)
