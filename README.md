@@ -22,7 +22,7 @@ Config.ServerPerms = {
 }
 ```
 
-Commands:
+### Commands:
 ```
 /me - Me
 /mer - Me with red name to make it more visable
