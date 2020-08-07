@@ -22,4 +22,13 @@ Config.ServerPerms = {
 }
 ```
 
+Commands:
+```
+/me - Me
+/mer - Me with red name to make it more visable
+/ooc - ooc chat (With Permission Prefix)
+/twt - twotter messages
+Normal chat is with prefix
+```
+
 ![Image](https://i.gyazo.com/470b74300f6f98b4d5b7f1f45b0944fd.png)
