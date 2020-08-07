@@ -27,7 +27,9 @@ RegisterCommand("me", function(source, args, rawCommand)
 		_id = ""
 	end
 	TriggerClientEvent('chatMessage', -1, "^*^"..Config.MePrefixColor.."".._id..""..Config.MePrefix.." " .. GetPlayerName(source)..":^r^0 "..rawCommand:gsub("me", ""), { 201, 201, 201 })
-	exports.JD_logs:discord('[ME] **'.. GetPlayerName(source) .. '**:`' .. rawCommand:gsub("me ", "") .. '`', source, 0 , '10592673', 'chat')
+	if Config.JD_logs then
+		exports.JD_logs:discord('[ME] **'.. GetPlayerName(source) .. '**:`' .. rawCommand:gsub("me ", "") .. '`', source, 0 , Config.JD_Logs_color, Config.JD_Logs_channel)
+	end
 end)
 
 RegisterCommand("mer", function(source, args, rawCommand)
@@ -37,7 +39,9 @@ RegisterCommand("mer", function(source, args, rawCommand)
 		_id = ""
 	end
 	TriggerClientEvent('chatMessage', -1, "^*^"..Config.MerPrefixColor.."".._id..""..Config.MerPrefix.." " .. GetPlayerName(source)..":^r^0"..rawCommand:gsub("mer", ""), { 255, 0, 0 })
-	exports.JD_logs:discord('[ME] **'.. GetPlayerName(source) .. '**:`' .. rawCommand:gsub("mer ", "") .. '`', source, 0 , '10592673', 'chat')
+	if Config.JD_logs then
+		exports.JD_logs:discord('[ME] **'.. GetPlayerName(source) .. '**:`' .. rawCommand:gsub("mer ", "") .. '`', source, 0 , Config.JD_Logs_color, Config.JD_Logs_channel)
+	end
 end)
 
 RegisterCommand("twt", function(source, args, rawCommand)
@@ -47,22 +51,30 @@ RegisterCommand("twt", function(source, args, rawCommand)
 		_id = ""
 	end
 	TriggerClientEvent('chatMessage', -1, "^*^"..Config.TwtPrefixColor.."".._id..""..Config.TwtPrefix.." @" .. GetPlayerName(source)..":^r^0 "..rawCommand:gsub("twt", ""))
-	exports.JD_logs:discord('[Twotter] **'.. GetPlayerName(source) .. '**:`' .. rawCommand:gsub("twt ", "") .. '`', source, 0 , '10592673', 'chat')
+	if Config.JD_logs then
+		exports.JD_logs:discord('[Twotter] **'.. GetPlayerName(source) .. '**:`' .. rawCommand:gsub("twt ", "") .. '`', source, 0 , Config.JD_Logs_color, Config.JD_Logs_channel)
+	end
 end)
 
 RegisterCommand("discord", function(source, args, rawCommand)
 	TriggerClientEvent('chatMessage', -1, "^*[Discord] ^r^0"..Config.DiscordLink, { 114, 137, 218 })
-	exports.JD_logs:discord('**'.. GetPlayerName(source) .. '**:`' .. rawCommand .. '` https://discord.gg/feKymks', source, 0 , '10592673', 'chat')
+	if Config.JD_logs then
+		exports.JD_logs:discord('**'.. GetPlayerName(source) .. '**:`' .. rawCommand .. '` https://discord.gg/feKymks', source, 0 , Config.JD_Logs_color, Config.JD_Logs_channel)
+	end
 end)
 
 RegisterCommand("teamspeak", function(source, args, rawCommand)
 	TriggerClientEvent('chatMessage', -1, "^*^3[TeamSpeak] ^r^0"..Config.TeamSpeakLink, { 28, 37, 55 })
-	exports.JD_logs:discord('**'.. GetPlayerName(source) .. '**:`' .. rawCommand .. '` https://discord.gg/feKymks', source, 0 , '10592673', 'chat')
+	if Config.JD_logs then
+		exports.JD_logs:discord('**'.. GetPlayerName(source) .. '**:`' .. rawCommand .. '` https://discord.gg/feKymks', source, 0 , Config.JD_Logs_color, Config.JD_Logs_channel)
+	end
 end)
 
 RegisterCommand("website", function(source, args, rawCommand)
 	TriggerClientEvent('chatMessage', -1, "^*^5[Website] ^r"..Config.WebsiteLink, { 28, 37, 55 })
-	exports.JD_logs:discord('**'.. GetPlayerName(source) .. '**:`' .. rawCommand .. '` https://discord.gg/feKymks', source, 0 , '10592673', 'chat')
+	if Config.JD_logs then
+		exports.JD_logs:discord('**'.. GetPlayerName(source) .. '**:`' .. rawCommand .. '` https://discord.gg/feKymks', source, 0 , Config.JD_Logs_color, Config.JD_Logs_channel)
+	end
 end)
 
 RegisterCommand("ooc", function(source, args, rawCommand)
@@ -71,7 +83,9 @@ RegisterCommand("ooc", function(source, args, rawCommand)
 	else
 		_id = ""
 	end
-	exports.JD_logs:discord('[OOC] **'.. GetPlayerName(source) .. '**:`' .. rawCommand:gsub("ooc ", "") .. '`', source, 0 , '10592673', 'chat')
+	if Config.JD_logs then
+		exports.JD_logs:discord('[OOC] **'.. GetPlayerName(source) .. '**:`' .. rawCommand:gsub("ooc ", "") .. '`', source, 0 , Config.JD_Logs_color, Config.JD_Logs_channel)
+	end
 	prefix = Config.ServerPerms[1][2]
 	color = Config.ServerPerms[1][1]
 	for i = 1, #Config.ServerPerms do

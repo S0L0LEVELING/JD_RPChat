@@ -2,6 +2,10 @@ Config = {}
 
 Config.playerID = true
 
+Config.JD_logs = false		-- Set to true if you're using my Discord to Logs resource ( https://github.com/JokeDevil/JD_logs )
+Config.JD_Logs_color = "1752220"
+Config.JD_Logs_channel = "chat"
+
 Config.DiscordLink = 'https://discord.gg/m4BvmkG'
 Config.TeamSpeakLink = 'ts.jokedevil.com'
 Config.WebsiteLink = 'https://www.jokedevil.com'
