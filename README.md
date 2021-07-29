@@ -2,8 +2,12 @@
 <h4 align="center">
 	<a href="https://github.com/JokeDevil/JD_RPChat/releases/latest" title=""><img alt="Licence" src="https://img.shields.io/github/release/JokeDevil/JD_RPChat.svg"></a>
 	<a href="LICENSE" title=""><img alt="Licence" src="https://img.shields.io/github/license/JokeDevil/JD_RPChat.svg"></a>
-	<a href="https://discord.gg/m4BvmkG" title=""><img alt="Discord Status" src="https://discordapp.com/api/guilds/721339695199682611/widget.png"></a>
+	<a href="https://discord.gg/qyPdHzDKmb" title=""><img alt="Discord Status" src="https://discordapp.com/api/guilds/721339695199682611/widget.png"></a>
 </h4>
+
+https://discord.gg/qyPdHzDKmb
+
+
 <h4 align="center">
   FiveM RPChat with Ace permissions for Prefix
 </h4>
@@ -30,6 +34,8 @@ Config.ServerPerms = {
 /twt - twotter messages
 Normal chat is with prefix
 ```
+
+https://discord.gg/qyPdHzDKmb
 
 ![Image](https://i.gyazo.com/470b74300f6f98b4d5b7f1f45b0944fd.png)
  
