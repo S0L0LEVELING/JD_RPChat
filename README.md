@@ -5,7 +5,7 @@
 	<a href="https://discord.gg/qyPdHzDKmb" title=""><img alt="Discord Status" src="https://discordapp.com/api/guilds/721339695199682611/widget.png"></a>
 </h4>
 
-https://discord.gg/qyPdHzDKmb
+https://discord.gg/prefech
 
 
 <h4 align="center">
@@ -35,7 +35,7 @@ Config.ServerPerms = {
 Normal chat is with prefix
 ```
 
-https://discord.gg/qyPdHzDKmb
+https://discord.gg/prefech
 
 ![Image](https://i.gyazo.com/470b74300f6f98b4d5b7f1f45b0944fd.png)
  
